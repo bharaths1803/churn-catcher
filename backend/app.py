@@ -1,14 +1,13 @@
 from flask import Flask, request, jsonify, send_from_directory
-from flask_cors import CORS
+#from flask_cors import CORS
 from collections import Counter
 import pandas as pd
 import numpy as np
 from joblib import load
-import os
 
 app = Flask(__name__, static_folder="frontend", static_url_path="/")
 
-CORS(app)
+#CORS(app)
 
 # Load models and other artifacts
 rf_model = load("ml/models/random_forest_model.pkl")

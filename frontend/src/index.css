@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+
+@layer utilities {
+
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+
+  .gradient {
+    @apply bg-gradient-to-br from-red-600 to-orange-600
+  }
+
+  .gradient-text {
+    @apply font-extrabold pb-2 pr-2 tracking-tight text-transparent bg-clip-text
+  }
+}
+
+
+.hero-image-wrapper {
+  perspective: 1200px;
+}
+
+.hero-image {
+  transform: rotateX(15deg) scale(1);
+  transition: transform 0.5s ease-out;
+  will-change: transform;
+}
+
+.hero-image.scrolled {
+  transform: rotateX(0deg) scale(1) translateY(40);
+}
+
+
+.tilt-image {
+  transform: rotateY(-15deg) scale(1);
+  transition: transform 0.5s ease-out;
+  will-change: transform;
+}
+
+.tilt-image-right {
+  transform: rotateY(15deg) scale(1);
+  transition: transform 0.5s ease-out;
+  will-change: transform;
+}

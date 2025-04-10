@@ -1,0 +1,23 @@
+# Ignore virtual environment
+backend/venv/
+backend/__pycache__/
+
+# Ignore ML models (optional)
+backend/ml/*.pkl
+backend/ml/*.h5
+backend/ml/*.json
+
+# Ignore environment variables
+backend/.env
+
+# Ignore frontend build
+frontend/node_modules/
+frontend/.vite/
+
+# Ignore VSCode settings
+.vscode/
+
+
+frontend/package-lock.json
+
+backend/ml/models/*.pkl

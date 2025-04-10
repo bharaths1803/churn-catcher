@@ -21,14 +21,14 @@ app = Flask(__name__)
 CORS(app)
 
 # Load models and other artifacts
-rf_model = load("ml/models/random_forest_model.pkl")
-gb_model = load("ml/models/gradient_boosting_model.pkl")
-xgb_model = load("ml/models/xgboost_model.pkl")
-ensemble_data = load("ml/models/ensemble_model.pkl")
-selected_features_data = load("ml/models/selected_features_model.pkl")
+rf_model = load("ml/new_models/random_forest_model.pkl")
+gb_model = load("ml/new_models/gradient_boosting_model.pkl")
+xgb_model = load("ml/new_models/xgboost_model.pkl")
+ensemble_data = load("ml/new_models/ensemble_model.pkl")
+selected_features_data = load("ml/new_models/selected_features_model.pkl")
 selected_features = selected_features_data["selected_features"]
-scaler = load("ml/models/scaler.pkl")
-label_encoder = load("ml/models/label_encoder.pkl")
+scaler = load("ml/new_models/scaler.pkl")
+label_encoder = load("ml/new_models/label_encoder.pkl")
 
 risk_data = 0
 users = 0

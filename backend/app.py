@@ -22,7 +22,9 @@ CORS(app)
 
 if os.getenv("DOWNLOAD_MODELS") == "True":
     from download_models import download_models
-    download_models()
+    model_folder = "ml/new_models"
+    if not os.path.exists(model_folder) or not os.listdir(model_folder):
+        download_models()
 
 # Load models and other artifacts
 rf_model = load("ml/new_models/random_forest_model.pkl")

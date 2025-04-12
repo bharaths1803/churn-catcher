@@ -20,6 +20,10 @@ app = Flask(__name__)
 
 CORS(app)
 
+if os.getenv("DOWNLOAD_MODELS") == "True":
+    from download_models import download_models
+    download_models()
+
 # Load models and other artifacts
 rf_model = load("ml/new_models/random_forest_model.pkl")
 gb_model = load("ml/new_models/gradient_boosting_model.pkl")
